@@ -1,0 +1,40 @@
+﻿<Window x:Class="Metadata.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Metadata"
+        mc:Ignorable="d"
+        Title="Вход" Height="250" Width="550" Background="#b9d1ea">
+    <Grid KeyDown="Grid_KeyDown">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.6*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="АИС Отдел кадров " HorizontalAlignment="Left" Background="#fffacd" VerticalAlignment="Center" Grid.ColumnSpan="2" Width="540" TextAlignment="Right"/>
+        <TextBlock x:Name="textBlockVersion" Text="Версия 1.0.0.0 " HorizontalAlignment="Left" Background="#ffd700" VerticalAlignment="Center" Grid.ColumnSpan="2" Width="540" TextAlignment="Right" Grid.Row="1"/>
+        <TextBlock Text="Введите имя пользовател и пароль " HorizontalAlignment="Left" Background="#ffffff" VerticalAlignment="Center" Grid.ColumnSpan="2" Width="540" TextAlignment="Right" Grid.Row="2"/>
+        <Image Source="/res/keys.png" Grid.RowSpan="3" HorizontalAlignment="Left" Margin="10,0,0,11" Width="65"/>
+        <TextBlock Text="    Имя пользователя" Grid.Row="4"/>
+        <TextBlock Text="    Пароль" Grid.Row="6"/>
+        <TextBox x:Name="textBoxLogin" Grid.Row="4" Grid.ColumnSpan="2" Margin="206,0,10,0"/>
+        <PasswordBox x:Name="passwordBoxPassword" Grid.Row="6" Grid.ColumnSpan="2" Margin="206,0,10,0"/>
+        <Button x:Name="buttonLogin" Grid.Row="7" Grid.RowSpan="2" Margin="10,10,85,12" Content="Вход" Click="buttonLogin_Click"/>
+        <Button x:Name="buttonCancel" Grid.Row="7" Grid.RowSpan="2" Grid.Column="1" Content="Отмена" Margin="216,12,10,10" Click="buttonCancel_Click"/>
+        <TextBlock x:Name="textBlockLanguage" Grid.Row="9"/>
+        <TextBlock x:Name="textBlockCapsLock" Grid.Row="9" Grid.Column="1" TextAlignment="Right"/>
+        <TextBlock x:Name="textBlockerror" Grid.Row="8" Grid.Column="1" TextAlignment="Left" Foreground="#FFED2121"/>
+    </Grid>
+</Window>
